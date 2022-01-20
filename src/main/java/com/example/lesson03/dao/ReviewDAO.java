@@ -9,5 +9,6 @@ import com.example.lesson03.model.Review;
 public interface ReviewDAO {
 
 	public Review selectReview(@Param("id") int id1);
-		
+
+	public int insertReview(Review review); 
 }

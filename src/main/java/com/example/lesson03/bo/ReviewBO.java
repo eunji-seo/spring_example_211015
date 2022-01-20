@@ -15,4 +15,8 @@ public class ReviewBO {
 	public Review getReview(int id1) {
 		return reviewDAO.selectReview(id1);
 	}
+	
+	public int addReview(Review review) {
+		return reviewDAO.insertReview(review);
+	}
 }
