@@ -19,4 +19,17 @@ public class ReviewBO {
 	public int addReview(Review review) {
 		return reviewDAO.insertReview(review);
 	}
+	
+	public int addReviewAsField(int storeId, String menu, 
+			String userName, Double point, String review ) { // Double point default가 있어 null 가능BO의 규칙 
+		
+		return reviewDAO.insertReviewAsField(storeId, menu, userName, point, review);
+
+	}
+	public int updateReviewById(int id, String review) {
+		return reviewDAO.updateReviewById(id, review);
+	}
+	public int deleteReviewByid(int id) {
+		return reviewDAO.deleteReviewByid(id);
+	}
 }

@@ -11,4 +11,17 @@ public interface ReviewDAO {
 	public Review selectReview(@Param("id") int id1);
 
 	public int insertReview(Review review); 
+	
+	public int insertReviewAsField(
+			@Param("storeId") int storeId, 
+			@Param("menu") String menu, 
+			@Param("userName") String userName, 
+			@Param("point") Double point, 
+			@Param("review") String review );
+	
+	public int updateReviewById(
+			@Param("id") int id, 
+			@Param("review") String review); // 두개이상일때는 map 
+	
+	public int deleteReviewByid(int id);
 }
