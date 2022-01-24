@@ -18,4 +18,5 @@ public class UserBO {
 	public User getLastUser() {
 		return userDAO.selectLastUser();
 	}
+	
 }
